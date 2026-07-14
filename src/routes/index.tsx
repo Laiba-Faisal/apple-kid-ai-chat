@@ -292,16 +292,12 @@ function LiveDemo() {
               className="glass-panel shadow-elev overflow-hidden rounded-3xl"
               style={{ width: 380, height: 600 }}
             >
-              {/* Widget will be embedded here */}
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center text-muted-foreground">
-                <MessageCircle className="h-8 w-8 opacity-40" />
-                <div className="text-xs">
-                  Chat widget mounts inside{" "}
-                  <code className="text-foreground/70">
-                    #chatbot-demo-container
-                  </code>
-                </div>
-              </div>
+              <iframe
+                src="/widget.html?api_key=demo"
+                title="Apple Kid AI Assistant demo"
+                className="h-full w-full border-0"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
