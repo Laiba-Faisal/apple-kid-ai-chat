@@ -93,21 +93,18 @@ function Hero() {
             Prepared for applekid.pk
           </div>
           <h1 className="mt-6 text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
-            A smarter way for{" "}
-            <span className="gradient-text">Apple Kid</span> to talk to
-            customers.
+            A smarter way for <span className="gradient-text">Apple Kid</span> to talk to customers.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            A 24/7 AI assistant trained on your catalog — answering product,
-            pricing and stock questions instantly. Built for iPhone, MacBook,
-            iPad and AirPods buyers across Pakistan.
+            A 24/7 AI assistant trained on your catalog — answering product, pricing and stock
+            questions instantly. Built for iPhone, MacBook, iPad and AirPods buyers across Pakistan.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#demo"
               className="group inline-flex items-center gap-2 rounded-full gradient-brand-bg px-6 py-3 text-sm font-semibold text-white shadow-brand transition hover:brightness-110"
             >
-              See Live Demo
+              Chat Now
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
             </a>
             <a
@@ -171,24 +168,19 @@ function ChatMockup() {
           </div>
         </div>
         <div className="space-y-3 py-2">
-          <Bubble side="in">
-            Hi! Do you have iPhone 15 Pro Max 256GB PTA-approved in stock?
+          <Bubble side="in">Hi! Do you have iPhone 15 Pro Max 256GB PTA-approved in stock?</Bubble>
+          <Bubble side="out">
+            Yes 👋 iPhone 15 Pro Max 256GB (PTA-approved, Natural Titanium) is in stock at Rs.
+            505,000.
           </Bubble>
           <Bubble side="out">
-            Yes 👋 iPhone 15 Pro Max 256GB (PTA-approved, Natural Titanium) is
-            in stock at Rs. 505,000.
-          </Bubble>
-          <Bubble side="out">
-            Would you like to trade in your old iPhone under our Exchange
-            Programme?
+            Would you like to trade in your old iPhone under our Exchange Programme?
           </Bubble>
           <Bubble side="in">Yes, I have iPhone 12. What can I get?</Bubble>
           <Bubble side="out" typing />
         </div>
         <div className="mt-3 flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-4 py-2.5">
-          <span className="text-xs text-muted-foreground">
-            Type your message…
-          </span>
+          <span className="text-xs text-muted-foreground">Type your message…</span>
           <div className="ml-auto flex h-7 w-7 items-center justify-center rounded-full gradient-brand-bg">
             <Send className="h-3.5 w-3.5 text-white" />
           </div>
@@ -212,9 +204,7 @@ function Bubble({
     <div className={`flex ${out ? "justify-start" : "justify-end"}`}>
       <div
         className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-snug ${
-          out
-            ? "gradient-brand-bg text-white shadow-brand"
-            : "bg-white/[0.06] text-foreground/90"
+          out ? "gradient-brand-bg text-white shadow-brand" : "bg-white/[0.06] text-foreground/90"
         }`}
       >
         {typing ? (
@@ -278,9 +268,7 @@ function ProblemSolution() {
               <it.icon className="h-5 w-5 text-white" />
             </div>
             <h3 className="mt-5 text-base font-semibold">{it.problem}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {it.solution}
-            </p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{it.solution}</p>
           </div>
         ))}
       </div>
@@ -298,10 +286,7 @@ function LiveDemo() {
           title="Try it. Ask anything an Apple Kid customer would."
           sub="This is the actual assistant — trained on a sample of your catalog."
         />
-        <div
-          data-reveal
-          className="reveal mt-14 flex justify-center"
-        >
+        <div data-reveal className="reveal mt-14 flex justify-center">
           <div className="relative">
             <div className="absolute -inset-8 -z-10 rounded-[2.5rem] gradient-brand-bg opacity-25 blur-3xl" />
             <div
@@ -358,10 +343,7 @@ function Features() {
   ];
   return (
     <section className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeader
-        eyebrow="Features"
-        title="Everything a modern Apple reseller needs."
-      />
+      <SectionHeader eyebrow="Features" title="Everything a modern Apple reseller needs." />
       <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {feats.map((f, i) => (
           <div
@@ -374,9 +356,7 @@ function Features() {
               <f.icon className="h-5 w-5 text-primary" />
             </div>
             <h3 className="mt-4 text-base font-semibold">{f.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {f.body}
-            </p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
           </div>
         ))}
       </div>
@@ -446,8 +426,8 @@ function WhyAppleKid() {
             ))}
           </div>
           <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
-            Data mirrors public info from applekid.pk — final training set built
-            with your team during onboarding.
+            Data mirrors public info from applekid.pk — final training set built with your team
+            during onboarding.
           </p>
         </div>
       </div>
@@ -471,10 +451,7 @@ function Pricing() {
         title="One clean starter package."
         sub="No feature gates. Everything you need to go live in under 2 weeks."
       />
-      <div
-        data-reveal
-        className="reveal mx-auto mt-14 max-w-lg"
-      >
+      <div data-reveal className="reveal mx-auto mt-14 max-w-lg">
         <div className="relative">
           <div className="absolute -inset-4 -z-10 rounded-[2rem] gradient-brand-bg opacity-30 blur-2xl" />
           <div className="glass-panel shadow-elev rounded-3xl p-8">
@@ -532,12 +509,11 @@ function ContactFooter() {
             Next step
           </div>
           <h2 className="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-            Let's put this live on{" "}
-            <span className="gradient-text">applekid.pk</span>
+            Let's put this live on <span className="gradient-text">applekid.pk</span>
           </h2>
           <p className="mt-5 max-w-md text-muted-foreground">
-            Send us a note or WhatsApp — we'll share a 5-minute personalised
-            demo trained on your actual products.
+            Send us a note or WhatsApp — we'll share a 5-minute personalised demo trained on your
+            actual products.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
@@ -604,20 +580,10 @@ function ContactFooter() {
   );
 }
 
-function Field({
-  label,
-  name,
-  placeholder,
-}: {
-  label: string;
-  name: string;
-  placeholder: string;
-}) {
+function Field({ label, name, placeholder }: { label: string; name: string; placeholder: string }) {
   return (
     <div>
-      <label className="mb-1.5 block text-xs font-medium text-muted-foreground">
-        {label}
-      </label>
+      <label className="mb-1.5 block text-xs font-medium text-muted-foreground">{label}</label>
       <input
         name={name}
         placeholder={placeholder}
@@ -627,25 +593,14 @@ function Field({
   );
 }
 
-function SectionHeader({
-  eyebrow,
-  title,
-  sub,
-}: {
-  eyebrow: string;
-  title: string;
-  sub?: string;
-}) {
+function SectionHeader({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
   return (
     <div className="mx-auto max-w-2xl text-center" data-reveal>
       <div className="inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground">
         {eyebrow}
       </div>
-      <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight sm:text-5xl">
-        {title}
-      </h2>
+      <h2 className="mt-4 text-balance text-4xl font-bold tracking-tight sm:text-5xl">{title}</h2>
       {sub && <p className="mt-4 text-muted-foreground">{sub}</p>}
     </div>
   );
 }
-
