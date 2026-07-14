@@ -292,7 +292,7 @@ function LiveDemo() {
             <div
               id="chatbot-demo-container"
               className="glass-panel shadow-elev overflow-hidden rounded-3xl"
-              style={{ width: 380, height: 600 }}
+              style={{ width: 900, height: 600 }}
             >
               <iframe
                 src="/widget.html?api_key=demo"
