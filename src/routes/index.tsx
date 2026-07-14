@@ -18,6 +18,10 @@ import {
   Send,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
+import iphoneImg from "@/assets/iphone.png";
+import macbookImg from "@/assets/macbook.png";
+import airpodsImg from "@/assets/airpods.png";
+import watchImg from "@/assets/watch.png";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
@@ -62,7 +66,7 @@ function Nav() {
             <Sparkles className="h-4.5 w-4.5 text-white" strokeWidth={2.5} />
           </div>
           <div className="leading-tight">
-            <div className="text-sm font-semibold">Chatline AI</div>
+            <div className="text-sm font-semibold">TenBit Solutions</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
               Proposal · Apple Kid
             </div>
@@ -120,7 +124,20 @@ function Hero() {
           </div>
         </div>
 
-        <div data-reveal data-reveal-delay="150" className="reveal">
+        <div data-reveal data-reveal-delay="150" className="reveal relative">
+          <img
+            src={iphoneImg}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -right-8 -top-10 w-56 rotate-12 opacity-70 drop-shadow-[0_20px_60px_rgba(124,58,237,0.45)] animate-float"
+          />
+          <img
+            src={airpodsImg}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -bottom-10 -left-6 w-36 opacity-70 drop-shadow-[0_20px_60px_rgba(79,70,229,0.45)] animate-float"
+            style={{ animationDelay: "1.2s" }}
+          />
           <ChatMockup />
         </div>
       </div>
@@ -292,16 +309,12 @@ function LiveDemo() {
               className="glass-panel shadow-elev overflow-hidden rounded-3xl"
               style={{ width: 380, height: 600 }}
             >
-              {/* Widget will be embedded here */}
-              <div className="flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center text-muted-foreground">
-                <MessageCircle className="h-8 w-8 opacity-40" />
-                <div className="text-xs">
-                  Chat widget mounts inside{" "}
-                  <code className="text-foreground/70">
-                    #chatbot-demo-container
-                  </code>
-                </div>
-              </div>
+              <iframe
+                src="/widget.html?api_key=demo"
+                title="Apple Kid AI Assistant demo"
+                className="h-full w-full border-0"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -401,25 +414,38 @@ function WhyAppleKid() {
         <div
           data-reveal
           data-reveal-delay="150"
-          className="reveal glass-panel shadow-elev rounded-3xl p-8"
+          className="reveal glass-panel shadow-elev rounded-3xl p-6"
         >
-          <div className="grid grid-cols-2 gap-4 text-center">
+          <div className="grid grid-cols-2 gap-4">
             {[
-              { k: "Categories", v: "6+" },
-              { k: "Products indexed", v: "500+" },
-              { k: "PTA-approved", v: "Yes" },
-              { k: "Exchange flow", v: "Supported" },
+              { img: iphoneImg, label: "iPhone", tag: "PTA-approved" },
+              { img: macbookImg, label: "MacBook", tag: "500+ SKUs" },
+              { img: airpodsImg, label: "AirPods", tag: "Original" },
+              { img: watchImg, label: "Apple Watch", tag: "All variants" },
             ].map((c) => (
               <div
-                key={c.k}
-                className="rounded-2xl border border-border bg-white/[0.03] p-5"
+                key={c.label}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-white/[0.03] p-4 transition hover:border-primary/40"
               >
-                <div className="text-2xl font-bold gradient-text">{c.v}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{c.k}</div>
+                <div className="absolute inset-0 -z-10 opacity-40 gradient-brand-bg blur-2xl transition group-hover:opacity-60" />
+                <div className="flex h-24 items-center justify-center">
+                  <img
+                    src={c.img}
+                    alt={c.label}
+                    loading="lazy"
+                    className="max-h-24 object-contain drop-shadow-[0_10px_30px_rgba(124,58,237,0.35)]"
+                  />
+                </div>
+                <div className="mt-3 flex items-center justify-between">
+                  <div className="text-sm font-semibold">{c.label}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                    {c.tag}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
+          <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
             Data mirrors public info from applekid.pk — final training set built
             with your team during onboarding.
           </p>
@@ -570,7 +596,7 @@ function ContactFooter() {
 
       <footer className="mt-24 border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
-          <div>© {new Date().getFullYear()} Chatline AI — Proposal for Apple Kid.</div>
+          <div>© {new Date().getFullYear()} TenBit Solutions — Proposal for Apple Kid.</div>
           <div>Crafted in Lahore, Pakistan.</div>
         </div>
       </footer>
