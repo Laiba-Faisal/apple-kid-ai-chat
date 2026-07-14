@@ -62,7 +62,7 @@ function Nav() {
             <Sparkles className="h-4.5 w-4.5 text-white" strokeWidth={2.5} />
           </div>
           <div className="leading-tight">
-            <div className="text-sm font-semibold">Chatline AI</div>
+            <div className="text-sm font-semibold">TenBit Solutions</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
               Proposal · Apple Kid
             </div>
