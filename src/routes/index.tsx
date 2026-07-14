@@ -623,5 +623,3 @@ function SectionHeader({
   );
 }
 
-// touch to keep useEffect ref
-void useEffect;
