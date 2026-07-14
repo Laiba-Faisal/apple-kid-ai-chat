@@ -401,25 +401,38 @@ function WhyAppleKid() {
         <div
           data-reveal
           data-reveal-delay="150"
-          className="reveal glass-panel shadow-elev rounded-3xl p-8"
+          className="reveal glass-panel shadow-elev rounded-3xl p-6"
         >
-          <div className="grid grid-cols-2 gap-4 text-center">
+          <div className="grid grid-cols-2 gap-4">
             {[
-              { k: "Categories", v: "6+" },
-              { k: "Products indexed", v: "500+" },
-              { k: "PTA-approved", v: "Yes" },
-              { k: "Exchange flow", v: "Supported" },
+              { img: iphoneImg, label: "iPhone", tag: "PTA-approved" },
+              { img: macbookImg, label: "MacBook", tag: "500+ SKUs" },
+              { img: airpodsImg, label: "AirPods", tag: "Original" },
+              { img: watchImg, label: "Apple Watch", tag: "All variants" },
             ].map((c) => (
               <div
-                key={c.k}
-                className="rounded-2xl border border-border bg-white/[0.03] p-5"
+                key={c.label}
+                className="group relative overflow-hidden rounded-2xl border border-border bg-white/[0.03] p-4 transition hover:border-primary/40"
               >
-                <div className="text-2xl font-bold gradient-text">{c.v}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{c.k}</div>
+                <div className="absolute inset-0 -z-10 opacity-40 gradient-brand-bg blur-2xl transition group-hover:opacity-60" />
+                <div className="flex h-24 items-center justify-center">
+                  <img
+                    src={c.img}
+                    alt={c.label}
+                    loading="lazy"
+                    className="max-h-24 object-contain drop-shadow-[0_10px_30px_rgba(124,58,237,0.35)]"
+                  />
+                </div>
+                <div className="mt-3 flex items-center justify-between">
+                  <div className="text-sm font-semibold">{c.label}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                    {c.tag}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
+          <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
             Data mirrors public info from applekid.pk — final training set built
             with your team during onboarding.
           </p>
