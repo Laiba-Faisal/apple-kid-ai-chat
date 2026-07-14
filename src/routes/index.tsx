@@ -124,7 +124,20 @@ function Hero() {
           </div>
         </div>
 
-        <div data-reveal data-reveal-delay="150" className="reveal">
+        <div data-reveal data-reveal-delay="150" className="reveal relative">
+          <img
+            src={iphoneImg}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -right-8 -top-10 w-56 rotate-12 opacity-70 drop-shadow-[0_20px_60px_rgba(124,58,237,0.45)] animate-float"
+          />
+          <img
+            src={airpodsImg}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -bottom-10 -left-6 w-36 opacity-70 drop-shadow-[0_20px_60px_rgba(79,70,229,0.45)] animate-float"
+            style={{ animationDelay: "1.2s" }}
+          />
           <ChatMockup />
         </div>
       </div>
