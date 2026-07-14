@@ -18,6 +18,10 @@ import {
   Send,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
+import iphoneImg from "@/assets/iphone.png";
+import macbookImg from "@/assets/macbook.png";
+import airpodsImg from "@/assets/airpods.png";
+import watchImg from "@/assets/watch.png";
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
